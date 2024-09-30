@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://naivas.info/wp-content/uploads/2022/11/naivas-history-beginings.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #ff5722; /* Custom button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #e64a19; /* Darker shade on hover */
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 150px; /* Adjust size as needed */
+    margin-bottom: 30px;
+}
+
+/* Scrolling category list */
+.category-marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    margin: 20px 0;
+    border: 1px solid #fff;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+
+.category-text {
+    display: inline-block;
+    padding-left: 100%; /* Start from the right */
+    animation: scroll 20s linear infinite; /* Slower scrolling speed */
+    font-size: 1.5em; /* Larger text size */
+    color: #ffcc00; /* Vibrant color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Adds shadow for depth */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(-100%); /* Move left */
+    }
+}

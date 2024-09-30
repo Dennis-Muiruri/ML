@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Forecast</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <img src="https://naivas.info/wp-content/uploads/2022/10/naivas-logo.png" alt="Naivas Logo" class="logo">
+    <h1>Sales Forecast</h1>
+    
+    <div class="category-marquee">
+        <div class="category-text">
+            beauty & cosmetics | vegetables | stationery | food additives | snacks | fats and oils | beverage | cleaning
+        </div>
+    </div>
+
+    <form method="POST">
+        <label for="category">Enter Category:</label>
+        <input type="text" id="category" name="category" required>
+        <button type="submit">Forecast</button>
+    </form>
+    
+    {% if plot %}
+        <h2>Forecast for {{ plot_category }}</h2>
+        <img src="{{ url_for('static', filename=plot) }}" alt="Forecast Plot">
+    {% endif %}
+</body>
+</html>
